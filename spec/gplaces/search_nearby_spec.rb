@@ -12,13 +12,12 @@ describe Gplaces::SearchNearby do
     Gplaces.configure do |c|
       c.api_key = test_key
       c.sensor = true
+      c.default_network_adapter = :typhoeus
     end
   end
 
   let(:search) { Gplaces::SearchNearby.new test_params  }
 
   it { search.query[:params][:location].should == '12.00000000,34.56000000' }
-  #it { search.query[:url].should == "#{Gplaces::API_URL}/nearbysearch/json" }
-  #it { search.query[:query].should == "?key=#{test_key}&senzor=#{Gplaces.conf.senzor}&location=15.0000,30.0000&type=food|coffee" }
 
 end
