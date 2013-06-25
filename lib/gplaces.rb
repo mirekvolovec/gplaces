@@ -2,12 +2,19 @@ require 'oj'
 
 require 'gplaces/version'
 require 'gplaces/networking/pageable'
+require 'gplaces/networking/single_result'
+require 'gplaces/networking/list_result'
+
 require 'gplaces/helpers/query_helper'
 require 'gplaces/networking/typhoeus_adapter'
 
 require 'gplaces/query_builder'
+require 'gplaces/search_text'
 require 'gplaces/search_nearby'
+require 'gplaces/place_detail'
 require 'gplaces/endpoints'
+
+require 'gplaces/model/place'
 
 module Gplaces
 

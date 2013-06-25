@@ -17,6 +17,13 @@ describe 'Http requests' do
     context 'return next page data' do
       let(:search) { Gplaces::SearchNearby.new(:radius => 200, :lat => 49.669249, :lng => 18.674966) }
 
+      it 'should return detail data' do
+        VCR.use_cassette 'request_search_and_get_detail' do
+          data = search.run
+          data[:results].first.detail[:status].should == 'OK'
+        end
+      end
+
       it 'should return next page' do
         VCR.use_cassette 'request_search_nearby_next_page' do
           data = search.run

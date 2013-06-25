@@ -1,7 +1,6 @@
 module Gplaces
   class QueryBuilder
     include QueryHelper
-    include Pageable
 
     attr_accessor :params
 
@@ -12,10 +11,6 @@ module Gplaces
       @params.merge! opts
 
       @adapter = Gplaces.default_network_adapter.new query
-    end
-
-    def run
-      @adapter.run
     end
 
   end
