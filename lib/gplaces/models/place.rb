@@ -1,4 +1,5 @@
 module Gplaces
+
   class Place < Hash
 
     def detail
@@ -6,4 +7,5 @@ module Gplaces
     end
 
   end
+
 end

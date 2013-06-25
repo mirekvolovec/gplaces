@@ -10,8 +10,6 @@ describe 'Http requests' do
     end
   end
 
-
-
   context 'Search nearby' do
 
     context 'return next page data' do
@@ -20,6 +18,7 @@ describe 'Http requests' do
       it 'should return detail data' do
         VCR.use_cassette 'request_search_and_get_detail' do
           data = search.run
+
           data[:results].first.detail[:status].should == 'OK'
         end
       end
@@ -27,6 +26,7 @@ describe 'Http requests' do
       it 'should return next page' do
         VCR.use_cassette 'request_search_nearby_next_page' do
           data = search.run
+
           search.run_next(data[:next_page_token])[:status].should == 'OK'
         end
       end
@@ -39,6 +39,7 @@ describe 'Http requests' do
       it 'should return ZERO_RESULTS' do
         VCR.use_cassette 'request_search_nearby_noresults' do
           data = search.run
+
           data[:status].should == 'ZERO_RESULTS'
         end
       end

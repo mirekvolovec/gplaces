@@ -1,5 +1,6 @@
 module Gplaces
-  class QueryBuilder
+
+  class RequestBuilder
     include QueryHelper
 
     attr_accessor :params
@@ -14,4 +15,5 @@ module Gplaces
     end
 
   end
+
 end

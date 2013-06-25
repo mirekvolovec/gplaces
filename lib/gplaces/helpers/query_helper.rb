@@ -1,4 +1,5 @@
 module Gplaces
+
   module QueryHelper
     extend self
 
@@ -24,4 +25,5 @@ module Gplaces
     end
 
   end
+
 end

@@ -1,6 +1,6 @@
 module Gplaces
 
-  class SearchNearby < QueryBuilder
+  class SearchNearby < RequestBuilder
     include Pageable
     include ListResult
 

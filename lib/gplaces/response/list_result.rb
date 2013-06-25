@@ -1,4 +1,5 @@
 module Gplaces
+
   module ListResult
     def run
       data = @adapter.run
@@ -6,4 +7,5 @@ module Gplaces
       data
     end
   end
+
 end

@@ -1,20 +1,20 @@
 require 'oj'
 
 require 'gplaces/version'
-require 'gplaces/networking/pageable'
-require 'gplaces/networking/single_result'
-require 'gplaces/networking/list_result'
+require 'gplaces/response/pageable'
+require 'gplaces/response/single_result'
+require 'gplaces/response/list_result'
 
 require 'gplaces/helpers/query_helper'
 require 'gplaces/networking/typhoeus_adapter'
 
-require 'gplaces/query_builder'
-require 'gplaces/search_text'
-require 'gplaces/search_nearby'
-require 'gplaces/place_detail'
+require 'gplaces/requests/request_builder'
+require 'gplaces/requests/search/search_text'
+require 'gplaces/requests/search/search_nearby'
+require 'gplaces/requests/detail/place_detail'
 require 'gplaces/endpoints'
 
-require 'gplaces/model/place'
+require 'gplaces/models/place'
 
 module Gplaces
 
@@ -33,7 +33,7 @@ module Gplaces
     def default_network_adapter
       case conf.default_network_adapter
         when :typhoeus
-          Gplaces::Networking::TyphoeusAdapter
+          Gplaces::TyphoeusAdapter
         else
           nil
       end

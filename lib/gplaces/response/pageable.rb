@@ -1,4 +1,5 @@
 module Gplaces
+
   module Pageable
 
     def run_next(next_page_token)
@@ -7,4 +8,5 @@ module Gplaces
     end
 
   end
+
 end

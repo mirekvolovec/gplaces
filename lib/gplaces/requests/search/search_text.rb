@@ -1,6 +1,6 @@
 module Gplaces
 
-  class SearchText < QueryBuilder
+  class SearchText < RequestBuilder
     include Pageable
     include ListResult
 

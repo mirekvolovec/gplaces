@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Gplaces::QueryBuilder do
+describe Gplaces::RequestBuilder do
   #context 'Initialization' do
   #  test_key = SecureRandom.uuid
   #

@@ -1,5 +1,6 @@
 module Gplaces
-  class PlaceDetail < QueryBuilder
+
+  class PlaceDetail < RequestBuilder
     include SingleResult
 
     def query
@@ -7,4 +8,5 @@ module Gplaces
     end
 
   end
+
 end
