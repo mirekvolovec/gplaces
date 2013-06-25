@@ -8,14 +8,14 @@ describe Gplaces do
       before do
         Gplaces.configure do |c|
           c.api_key = uuid
-          c.senzor = false
+          c.sensor = false
         end
       end
 
       subject { Gplaces.conf }
 
       its(:api_key) { uuid }
-      its(:senzor) { false }
+      its(:sensor) { false }
 
     end
 
