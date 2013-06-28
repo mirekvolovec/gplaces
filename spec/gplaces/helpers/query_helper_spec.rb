@@ -27,4 +27,19 @@ describe Gplaces::QueryHelper do
     end
   end
 
+  context 'build query hash' do
+    let(:query) { Gplaces::QueryHelper.query_hash(:get, 'http://test.com', key:true, sensor:true) }
+
+    it 'should have the correct structure' do
+      query.should == {
+        method: :get,
+        url:    'http://test.com',
+        params: {
+          key:    true,
+          sensor: true
+        }
+      }
+    end
+  end
+
 end

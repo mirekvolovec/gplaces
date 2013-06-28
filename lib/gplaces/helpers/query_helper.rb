@@ -3,7 +3,7 @@ module Gplaces
   module QueryHelper
     extend self
 
-    def query_hash(method, url, params)
+    def query_hash(method, url, params = {})
       {
         :method => method,
         :url => url,
